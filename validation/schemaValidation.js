@@ -28,9 +28,22 @@ const courseValidation = yup.object().shape({
   coursePrice: yup.string().required()
 })
 
+// popular course schema
+const popularCourseValidation = yup.object().shape({
+  coverImage: yup.string().required(),
+  courseTitle: yup.string().required(),
+  courseDetail: yup.string().required(),
+  instructorImage: yup.string().required(),
+  updateDate: yup.string().required(),
+  coursePrice: yup.string().required()
+})
+
+
+
 module.exports = {
   signUpValidation,
   loginValidation,
   bannerValidation,
-  courseValidation
+  courseValidation,
+  popularCourseValidation
 };
