@@ -21,7 +21,6 @@ const bannerValidation = yup.object().shape({
   bannerImage: yup.string().required(),
 });
 
-
 // popular course validation
 const popularCourseValidation = yup.object().shape({
   coverImage: yup.string().required(),
@@ -32,23 +31,9 @@ const popularCourseValidation = yup.object().shape({
   coursePrice: yup.string().required(),
 });
 
-// foundation course validation
-const foundationCourseValidation = yup.object().shape({
-  courseImage: yup.string().required(),
-  courseTitle: yup.string().required(),
-  titleBangla: yup.string().required(),
-  coursePrice: yup.string().required(),
-  shortNote: yup.string().required(),
-  courseDetail: yup.string().required(),
-  instructorImage: yup.string().required(),
-  instructorProfession: yup.string().required(),
-  instructorDetail: yup.string().required(),
-});
-
 module.exports = {
   signUpValidation,
   loginValidation,
   bannerValidation,
   popularCourseValidation,
-  foundationCourseValidation,
 };

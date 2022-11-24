@@ -8,7 +8,6 @@ const port = process.env.PORT || 1000;
 const userRouter = require("./routes/userRoute.js");
 const bannerRouter = require("./routes/bannerRoute.js");
 const popularCourseRouter = require("./routes/popularCourseRoute");
-const foundationCourseRoute = require("./routes/foundationCourseRoute.js");
 
 // user express
 const app = express();
@@ -29,7 +28,6 @@ app.get("/", (req, res) => {
 app.use("/api/user", userRouter);
 app.use("/api/banner", bannerRouter);
 app.use("/api/popularCourses", popularCourseRouter);
-app.use("/api/foundationCourse", foundationCourseRoute);
 
 // mongodb connection
 mongoose
