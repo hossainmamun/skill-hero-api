@@ -14,7 +14,15 @@ const loginValidation = yup.object().shape({
   password: yup.string().min(6).max(16).required(),
 });
 
+// banner validation
+const bannerValidation = yup.object().shape({
+  bannerTitle: yup.string().required(),
+  bannerSubTitle: yup.string().required(),
+  bannerImage: yup.string().required()
+})
+
 module.exports = {
   signUpValidation,
   loginValidation,
+  bannerValidation
 };
