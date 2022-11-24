@@ -18,32 +18,37 @@ const loginValidation = yup.object().shape({
 const bannerValidation = yup.object().shape({
   bannerTitle: yup.string().required(),
   bannerSubTitle: yup.string().required(),
-  bannerImage: yup.string().required()
-})
+  bannerImage: yup.string().required(),
+});
 
-// course schema
-const courseValidation = yup.object().shape({
-  courseImage: yup.string().required(),
-  courseTitle: yup.string().required(),
-  coursePrice: yup.string().required()
-})
 
-// popular course schema
+// popular course validation
 const popularCourseValidation = yup.object().shape({
   coverImage: yup.string().required(),
   courseTitle: yup.string().required(),
   courseDetail: yup.string().required(),
   instructorImage: yup.string().required(),
   updateDate: yup.string().required(),
-  coursePrice: yup.string().required()
-})
+  coursePrice: yup.string().required(),
+});
 
-
+// foundation course validation
+const foundationCourseValidation = yup.object().shape({
+  courseImage: yup.string().required(),
+  courseTitle: yup.string().required(),
+  titleBangla: yup.string().required(),
+  coursePrice: yup.string().required(),
+  shortNote: yup.string().required(),
+  courseDetail: yup.string().required(),
+  instructorImage: yup.string().required(),
+  instructorProfession: yup.string().required(),
+  instructorDetail: yup.string().required(),
+});
 
 module.exports = {
   signUpValidation,
   loginValidation,
   bannerValidation,
-  courseValidation,
-  popularCourseValidation
+  popularCourseValidation,
+  foundationCourseValidation,
 };
