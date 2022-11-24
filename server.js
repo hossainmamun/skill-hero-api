@@ -7,6 +7,7 @@ const port = process.env.PORT || 1000;
 // import routers
 const userRouter = require("./routes/userRoute.js");
 const bannerRouter = require("./routes/bannerRoute.js");
+const courseRouter = require("./routes/courseRoute")
 
 // user express
 const app = express();
@@ -26,6 +27,7 @@ app.get("/", (req, res) => {
 // user routers
 app.use("/api/user", userRouter);
 app.use("/api/banner", bannerRouter)
+app.use("/api/courses", courseRouter)
 
 // mongodb connection
 mongoose

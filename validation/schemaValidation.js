@@ -21,8 +21,16 @@ const bannerValidation = yup.object().shape({
   bannerImage: yup.string().required()
 })
 
+// course schema
+const courseValidation = yup.object().shape({
+  courseImage: yup.string().required(),
+  courseTitle: yup.string().required(),
+  coursePrice: yup.string().required()
+})
+
 module.exports = {
   signUpValidation,
   loginValidation,
-  bannerValidation
+  bannerValidation,
+  courseValidation
 };
