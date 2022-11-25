@@ -5,20 +5,28 @@ const createPopularCourse = async (req, res) => {
   const {
     coverImage,
     courseTitle,
+    titleBangla,
+    coursePrice,
+    shortNote,
     courseDetail,
     instructorImage,
+    instructorProfession,
+    instructorDetail,
     updateDate,
-    coursePrice,
   } = req.body;
 
   try {
     const course = await popularCourseSchema.create({
       coverImage,
       courseTitle,
+      titleBangla,
+      coursePrice,
+      shortNote,
       courseDetail,
       instructorImage,
+      instructorProfession,
+      instructorDetail,
       updateDate,
-      coursePrice,
     });
     res.status(201).json(course);
   } catch (error) {
@@ -53,10 +61,14 @@ const updatePopularCourse = async (req, res) => {
   const {
     coverImage,
     courseTitle,
+    titleBangla,
+    coursePrice,
+    shortNote,
     courseDetail,
     instructorImage,
+    instructorProfession,
+    instructorDetail,
     updateDate,
-    coursePrice,
   } = req.body;
 
   try {
@@ -65,10 +77,14 @@ const updatePopularCourse = async (req, res) => {
       {
         coverImage,
         courseTitle,
+        titleBangla,
+        coursePrice,
+        shortNote,
         courseDetail,
         instructorImage,
+        instructorProfession,
+        instructorDetail,
         updateDate,
-        coursePrice,
       },
       { returnOriginal: false }
     );

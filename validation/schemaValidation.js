@@ -25,10 +25,14 @@ const bannerValidation = yup.object().shape({
 const popularCourseValidation = yup.object().shape({
   coverImage: yup.string().required(),
   courseTitle: yup.string().required(),
+  titleBangla: yup.string().required(),
+  coursePrice: yup.string().required(),
+  shortNote: yup.string().required(),
   courseDetail: yup.string().required(),
   instructorImage: yup.string().required(),
+  instructorProfession: yup.string().required(),
+  instructorDetail: yup.string().required(),
   updateDate: yup.string().required(),
-  coursePrice: yup.string().required(),
 });
 
 // foundation course validation
