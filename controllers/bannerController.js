@@ -2,13 +2,12 @@ const bannerSchema = require("../models/bannerModel");
 
 // create banner
 const createBanner = async (req, res) => {
-  const { bannerTitle, bannerSubTitle, bannerImage } = req.body;
+  const { bannerTitle, bannerSubTitle } = req.body;
 
   try {
     const banner = await bannerSchema.create({
       bannerTitle,
       bannerSubTitle,
-      bannerImage,
     });
     res.status(201).json(banner);
   } catch (error) {
@@ -47,7 +46,6 @@ const updateBanner = async (req, res) => {
       {
         bannerTitle,
         bannerSubTitle,
-        bannerImage,
       },
       { returnOriginal: false }
     );

@@ -18,7 +18,6 @@ const loginValidation = yup.object().shape({
 const bannerValidation = yup.object().shape({
   bannerTitle: yup.string().required(),
   bannerSubTitle: yup.string().required(),
-  bannerImage: yup.string().required(),
 });
 
 // popular course validation

@@ -11,10 +11,6 @@ const bannerSchema = new mongoose.Schema(
       type: String,
       require: true,
     },
-    bannerImage: {
-      type: String,
-      require: true,
-    },
   },
   { timestamps: true }
 );

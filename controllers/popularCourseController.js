@@ -3,13 +3,11 @@ const popularCourseSchema = require("../models/popularCourseModel.js");
 // create popular course
 const createPopularCourse = async (req, res) => {
   const {
-    coverImage,
     courseTitle,
     titleBangla,
     coursePrice,
     shortNote,
     courseDetail,
-    instructorImage,
     instructorProfession,
     instructorDetail,
     updateDate,
@@ -17,13 +15,11 @@ const createPopularCourse = async (req, res) => {
 
   try {
     const course = await popularCourseSchema.create({
-      coverImage,
       courseTitle,
       titleBangla,
       coursePrice,
       shortNote,
       courseDetail,
-      instructorImage,
       instructorProfession,
       instructorDetail,
       updateDate,
